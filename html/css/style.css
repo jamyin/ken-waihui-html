@@ -13,5 +13,8 @@
 
 .party{width:100%;overflow:hidden}
 .party img{width:100%;height:auto}
-
+.about{position:relative;width:100%;overflow:hidden}
+.about img{width:100%;height:auto}
+.about .text{position:absolute;width:48%;overflow:hidden;top:30%;left:50%;margin-left:-24%;}
+.about .text p{line-height:24px;}
 
