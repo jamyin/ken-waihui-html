@@ -1,0 +1,135 @@
+body{
+  margin:0;
+  line-height: 0;
+}
+
+.bg {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg>img {
+  width: 100%;
+  height: auto;
+}
+
+
+a.ft {
+  position: absolute;
+}
+
+a.ft.ft1 {
+  top: 0;
+  left: 13.8%;
+}
+
+a.ft.ft2 {
+  top: 0;
+  left: 67.5%;
+}
+a.ft.ft3 {
+  top: 0;
+  left: 12.5%;
+}
+
+a.ft.ft4 {
+  top: 0;
+  left: 64.7%;
+}
+a.ft.ft5 {
+  left: 17.5%;
+  bottom: 170px;
+}
+
+.hd {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 90px;
+  background-color: #000;
+}
+
+img.logo {
+  position: absolute;
+  top: 20px;
+  line-height: 90px;
+  float: left;
+}
+
+ul.hd-item {
+  float: right;
+  display: inline-block;
+  list-style: none;
+  margin-right: 10%;
+  width: 70%;
+}
+
+ul.hd-item li {
+  float: left;
+  width: 14%;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul.eat-type-hd li {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+}
+
+ul.eat-type-hd {
+  width: 60%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 34%;
+  left: 20%;
+}
+
+ul.eat-type-hd img {width: 100%;}
+
+ul.hd-item img {
+  width: 100%;
+  height: auto;
+}
+
+span.pri {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 20%;
+  margin-left: -10%;
+}
+
+span.p1 {
+  top: 15%;
+  left: 22%;
+}
+
+span.p2 {
+  top: 15%;
+  left: 52%;
+}
+
+span.p3 {
+  top: 34%;
+  left: 26%;
+}
+span.p4 {
+  top: 34%;
+  left: 48%;
+}
+span.p5 {
+  top: 34%;
+  left: 70%;
+}
+
+span.pri img {
+  width: 100%;
+  height: auto;
+}
+
