@@ -5,19 +5,60 @@
 		<meta charset="UTF-8">
 		<title>party首页</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<style type="text/css">
+			<!-- #ma-wrapper {
+				background: #FFF;
+				overflow: hidden;
+				border: 1px dashed #CCC;
+				width: 500px;
+			}
+			
+			#ma-wrapper img {
+				border: 3px solid #F2F2F2;
+			}
+			
+			#indemo {
+				float: left;
+				width: 1500%;
+			}
+			
+			#demo1 {
+				float: left;
+			}
+			
+			#demo2 {
+				float: left;
+			}
+			
+			-->
+		</style>
+
 	</head>
 
 	<body>
 		<div class="hd">
 			<img class="logo" src="img/logo.png" />
 			<ul class="hd-item">
-				<li class="aboutus"><img src="img/nav01.png" /></li>
-				<li class="qual"><img src="img/nav02.png" /></li>
-				<li class="catering"><img src="img/nav03.png" /></li>
-				<li class="menu"><img src="img/nav04.png" /></li>
-				<li class="activity"><img src="img/nav05.png" /></li>
-				<li class="field"><img src="img/nav06.png" /></li>
-				<li class="contanct"><img src="img/nav07.png" /></li>
+				<li class="aboutus">
+					<a class="aboutus-a" href="about.html"></a>
+				</li>
+				<li class="qual">
+					<a class="qual-a" href="company.html"></a>
+				</li>
+				<li class="catering">
+					<a class="catering-a" href="party.html"></a>
+				</li>
+				<li class="menu"><a class="menu-a" href=""></a></li>
+				<li class="activity"><a class="activity-a"   href=""></a></li>
+				<li class="field"><a class="field-a" href=""></a></li>
+				<li class="contanct"><a class="contanct-a" href=""></a></li>
+			</ul>
+			<ul class="hd-share">
+				<li class="weibo share"><a href="###"></a></li>
+				<li class="tel share"><a href="###"></a></li>
+				<li class="weixin share"><a href="###"></a></li>
 			</ul>
 		</div>
 		<div class="bg bg1">
@@ -40,21 +81,68 @@
 		<div class="bg bg3">
 			<img src="img/indexbg3.jpg" alt="" />
 			<a class="ft ft2" href="###"><img src="img/i-f-02.png" /></a>
-			<span class="p1 pri"><img src="img/2688.png"/></span>
-			<span class="p2 pri"><img src="img/3288.png"/></span>
-			<span class="p3 pri"><img src="img/3988.png"/></span>
-			<span class="p4 pri"><img src="img/4688.png"/></span>
-			<span class="p5 pri"><img src="img/5988.png"/></span>
+			<span class="p1 pri"><img src="img/26880.png"/></span>
+			<span class="p2 pri"><img src="img/32880.png"/></span>
+			<span class="p3 pri"><img src="img/39880.png"/></span>
+			<span class="p4 pri"><img src="img/46880.png"/></span>
+			<span class="p5 pri"><img src="img/59880.png"/></span>
 		</div>
 		<div class="bg bg4">
 			<img src="img/indexbg4.jpg" alt="" />
 			<a class="ft ft3" href="###"><img src="img/i-f-03.png" /></a>
+			<span class="s4-bd a"><img src="img/S403.png"/></span>
+			<div id="ma-wrapper">
+				<div id="indemo">
+					<div id="demo1">
+						<a href="#"><img src="img/S3-01.png" border="0" /></a>
+						<a href="#"><img src="img/S3-02.png" border="0" /></a>
+						<a href="#"><img src="img/S3-03.png" border="0" /></a>
+						<a href="#"><img src="img/S3-04.png" border="0" /></a>
+						<a href="#"><img src="img/S3-05.png" border="0" /></a>
+					</div>
+					<div id="demo2"></div>
+				</div>
+			</div>
 		</div>
 		<div class="bg bg5">
 			<img src="img/indexbg5.jpg" alt="" />
 			<a class="ft ft4" href="###"><img src="img/i-f-04.png" /></a>
 			<a class="ft ft5" href="###"><img src="img/i-f-05.png" /></a>
+			<span class="s4-bd b"><img src="img/S402.png"/></span>
+			<span class="s4-bd c"><img src="img/S401.png"/></span>
 		</div>
+
+		<script>
+			<!--
+			var speed = 10; //数字越大速度越慢
+			var tab = document.getElementById("ma-wrapper");
+			var tab1 = document.getElementById("demo1");
+			var tab2 = document.getElementById("demo2");
+			tab2.innerHTML = tab1.innerHTML;
+
+			function Marquee() {
+				if (tab2.offsetWidth - tab.scrollLeft <= 0){
+//					console.log(tab2.offsetWidth);
+					tab.scrollLeft -= tab1.offsetWidth
+				}else {
+					tab.scrollLeft++;
+				}
+			}
+			var MyMar = setInterval(Marquee, speed);
+			tab.onmouseover = function(e) {
+				clearInterval(MyMar);
+//				if(e.target.src==undefined){
+//					debugger;
+//				}
+				e.target.setAttribute("src",e.target.src.replace("-0","-1"));
+			};
+			tab.onmouseout = function(e) {
+				e.target.setAttribute("src",e.target.src.replace("-1","-0"));
+				MyMar = setInterval(Marquee, speed)
+			};
+			-->
+		</script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
