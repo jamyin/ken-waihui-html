@@ -41,8 +41,8 @@ a.ft.ft3 {
 }
 
 a.ft.ft4 {
-	top: 0;
-	left: 64.7%;
+	top: 0%;
+	left: 57.7%;
 	width: 31%;
 }
 
@@ -163,26 +163,27 @@ span.pri {
 
 span.p1 {
 	top: 20%;
-	margin-left: -36%;
+	margin-left: -29%;
 }
 
 span.p2 {
-	top: 20%;
-	margin-left: -12%;
+	top: 40%;
+	margin-left: -26%;
 }
 
 span.p3 {
 	top: 40%;
-	margin-left: -34%;
+	margin-left: -4%;
 }
 
 span.p4 {
-	top: 40%;
+	top: 62%;
+	margin-left: -22%;
 }
 
 span.p5 {
-	top: 40%;
-	margin-left: 14%;
+	top: 62%;
+	margin-left: 0;
 }
 
 span.pri img {
@@ -193,22 +194,22 @@ span.pri img {
 span.s4-bd {
 	top: 0;
 	position: absolute;
-	left: 50%;
+	left: 37%;
 	width: 26%;
 	margin-left: -13%;
 	cursor: pointer;
 }
 
 span.s4-bd.a {
-	top: 50%;
+	/* top: 50%; */
 }
 
 span.s4-bd.b {
-	top: 5%;
+	top: 30%;
 }
 
 span.s4-bd.c {
-	top: 30%;
+	top: 60%;
 }
 
 span.s4-bd img {
@@ -217,56 +218,88 @@ span.s4-bd img {
 
 div#ma-wrapper {
 	position: absolute;
-	top: 30%;
+	bottom: 30%;
 	left: 50%;
 	margin-left: -30%;
 	width: 60%;
-	border: 1px dashed #CCC;
+	background: #000;
+	border: 0 dashed #CCC;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
 #ma-wrapper img {
-  width: 210px;
-  height: 156px;
+	width: 210px;
+	height: 156px;
 }
 
 div#ma-wrapper a {
-	/* width: 10%; */
+	display: inline-block;
+	margin: 0;
+	padding: 20px 0;
+	float: left;
+	margin-right: 10px;
 }
 
+#ma-wrapper img {
+	border: 3px solid #F2F2F2;
+}
 
+#indemo {
+	float: left;
+	width: 1500%;
+}
+
+#demo1,
+#demo2 {
+	float: left;
+}
 
 li.share {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  float: left;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
 }
+
 li.weibo.share {
-  background-image: url(../img/weibo.png);
+	background-image: url(../img/weibo.png);
 }
 
 li.tel.share {
-  background-image: url(../img/tel.png);
+	background-image: url(../img/tel.png);
 }
 
 li.weixin.share {
-  background-image: url(../img/weixin.png);
+	background-image: url(../img/weixin.png);
 }
 
 ul.hd-share {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  right: 10px;
-  top: 30px;
-  overflow: hidden;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	right: 10px;
+	top: 30px;
+	overflow: hidden;
 }
 
 .share a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
+
+div#ma-wrapper a:hover{
+	position: relative;
+	padding: 10px 0px;
+	margin-right: 0px;
+	margin-left: -10px;
+	z-index: 4;
+}
+
+div#ma-wrapper a:hover img {
+  width: 230px;
+  height: 182px;
+} 
