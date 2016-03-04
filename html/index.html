@@ -5,13 +5,13 @@
 		<meta charset="UTF-8">
 		<title>party首页</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 
 	</head>
 
 	<body>
 		<div class="hd">
-			<img class="logo" src="img/logo.png" />
+			<a href="index.html"><img class="logo" src="img/logo.png" /></a>
 			<ul class="hd-item">
 				<li class="home">
 					<a class="home-a cur" href="index.html"></a>
@@ -108,7 +108,7 @@
 //					console.log("tab2.offsetWidth:"+tab2.offsetWidth+"\ntab.scrollLeft:"+tab.scrollLeft+"\ntab1.offsetWidth:"+tab1.offsetWidth)
 //					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
 					if (tab.scrollLeft-tab1.offsetWidth >= 0) {
-						console.warn("Hello,"+tab2.offsetWidth);
+//						console.warn("Hello,"+tab2.offsetWidth);
 						tab.scrollLeft -= tab1.offsetWidth
 					} else {
 						tab.scrollLeft++;
