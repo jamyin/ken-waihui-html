@@ -13,6 +13,9 @@
 		<div class="hd">
 			<img class="logo" src="img/logo.png" />
 			<ul class="hd-item">
+				<li class="home">
+					<a class="home-a cur" href="index.html"></a>
+				</li>
 				<li class="aboutus">
 					<a class="aboutus-a" href="about.html"></a>
 				</li>
@@ -102,7 +105,7 @@
 				tab2.innerHTML = tab1.innerHTML;
 				
 				function Marquee() {
-					console.log("tab2.offsetWidth:"+tab2.offsetWidth+"\ntab.scrollLeft:"+tab.scrollLeft+"\ntab1.offsetWidth:"+tab1.offsetWidth)
+//					console.log("tab2.offsetWidth:"+tab2.offsetWidth+"\ntab.scrollLeft:"+tab.scrollLeft+"\ntab1.offsetWidth:"+tab1.offsetWidth)
 //					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
 					if (tab.scrollLeft-tab1.offsetWidth >= 0) {
 						console.warn("Hello,"+tab2.offsetWidth);
