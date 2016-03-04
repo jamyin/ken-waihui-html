@@ -43,3 +43,32 @@ html{font-size:16px}
 
 .menu{width:100%;overflow:hidden}
 .menu img{width:100%;height:auto}
+
+
+/*微信  start--*/
+.hide{
+	display: none;
+}
+.wexin-pop {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  right: 8px;
+  top: 80px;
+}
+
+.wexin-pop img {
+  width: 200px;
+  height: 200px;
+}
+
+li.tel.share span {
+  padding-left: 31px;
+  font-family: "arial narrow";
+  width: 117px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+}
+/*微信  end--*/
