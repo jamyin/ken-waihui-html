@@ -397,8 +397,9 @@ div#ma-wrapper a:hover{
 }
 
 div#ma-wrapper a:hover img {
-  width: 151.2px;
-  height: 112.32px;
+  width: 200px;
+  height: 140px;
+  margin-top: -10px;
 } 
 
 
