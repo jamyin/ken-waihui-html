@@ -22,5 +22,10 @@ $(function() {
 		var $img = $(this).find("img");
 		$img.attr("src", "img/S5000.png");
 	});
+	$(".weixin").hover(function() {
+		$(".wexin-pop").removeClass("hide");
+	}, function() {
+		$(".wexin-pop").addClass("hide");
+	});
 
 });

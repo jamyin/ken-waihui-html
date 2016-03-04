@@ -3,6 +3,9 @@ body {
 	line-height: 0;
 }
 
+.hide{
+	display: none;
+}
 @media screen and (min-width:1440px) {
 	html {font-size: 24px;}
 }
@@ -404,4 +407,18 @@ span.price {
   right: 304px;
   top: 54%;
   right: 80%;
+}
+
+.wexin-pop {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  right: 8px;
+  top: 80px;
+}
+
+.wexin-pop img {
+  width: 200px;
+  height: 200px;
 }
