@@ -91,7 +91,7 @@ ul.hd-item a {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	font-size: 28px;
+	font-size: 24px;
 	line-height: 3.4;
 	color: #b1b1b1;
 	text-decoration: none;
@@ -186,6 +186,21 @@ span.p5 {
 	margin-left: 0;
 }
 
+span.p6 {
+	top: 26%;
+	margin-left: -19%;
+}
+
+span.p7 {
+	top: 54%;
+	margin-left: -24%;
+}
+
+span.p8 {
+	top: 54%;
+	margin-left: 0;
+}
+
 span.pri img {
 	width: 100%;
 	height: auto;
@@ -218,7 +233,7 @@ span.s4-bd img {
 
 div#ma-wrapper {
 	position: absolute;
-	bottom: 30%;
+	bottom: 29.6%;
 	left: 50%;
 	margin-left: -30%;
 	width: 60%;
@@ -234,11 +249,14 @@ div#ma-wrapper {
 }
 
 div#ma-wrapper a {
-	display: inline-block;
+	position: relative;
+	display: block;
 	margin: 0;
 	padding: 20px 0;
 	float: left;
 	margin-right: 10px;
+	/* left: 50%; */
+	/* top: 50%; */
 }
 
 #ma-wrapper img {
