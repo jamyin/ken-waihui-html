@@ -53,11 +53,14 @@
 		<div class="bg bg3">
 			<img src="img/indexbg3.jpg" alt="" />
 			<a class="ft ft2" href="###"><img src="img/i-f-02.png" /></a>
-			<span class="p1 pri"><img src="img/26880.png"/></span>
+			<!--<span class="p1 pri"><img src="img/26880.png"/></span>
 			<span class="p2 pri"><img src="img/32880.png"/></span>
 			<span class="p3 pri"><img src="img/39880.png"/></span>
 			<span class="p4 pri"><img src="img/46880.png"/></span>
-			<span class="p5 pri"><img src="img/59880.png"/></span>
+			<span class="p5 pri"><img src="img/59880.png"/></span>-->
+			<span class="p6 pri"><img src="img/2000-0.png"/></span>
+			<span class="p7 pri"><img src="img/3000-0.png"/></span>
+			<span class="p8 pri"><img src="img/3500-0.png"/></span>
 		</div>
 		<div class="bg bg4">
 			<img src="img/indexbg4.jpg" alt="" />
@@ -67,6 +70,9 @@
 					<div id="demo1">
 						<a href="#"><img src="img/S3-01.png" border="0" /></a>
 						<a href="#"><img src="img/S3-02.png" border="0" /></a>
+						<a href="#"><img src="img/S3-03.png" border="0" /></a>
+						<a href="#"><img src="img/S3-04.png" border="0" /></a>
+						<a href="#"><img src="img/S3-05.png" border="0" /></a>
 						<a href="#"><img src="img/S3-03.png" border="0" /></a>
 						<a href="#"><img src="img/S3-04.png" border="0" /></a>
 						<a href="#"><img src="img/S3-05.png" border="0" /></a>
@@ -96,8 +102,10 @@
 				tab2.innerHTML = tab1.innerHTML;
 				
 				function Marquee() {
-					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
-						//					console.log(tab2.offsetWidth);
+					console.log("tab2.offsetWidth:"+tab2.offsetWidth+"\ntab.scrollLeft:"+tab.scrollLeft+"\ntab1.offsetWidth:"+tab1.offsetWidth)
+//					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
+					if (tab.scrollLeft-tab1.offsetWidth >= 0) {
+						console.warn("Hello,"+tab2.offsetWidth);
 						tab.scrollLeft -= tab1.offsetWidth
 					} else {
 						tab.scrollLeft++;
