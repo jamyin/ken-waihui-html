@@ -1,5 +1,20 @@
 @charset "UTF-8";
 /* CSS Document */
+html{font-size:16px}
+@media screen and (min-width:1440px) {
+	html {font-size:16px;}
+}
+
+@media screen and (min-width:1280px) and (max-width:1439px){
+	html {font-size:16px;}
+}
+@media screen and (min-width:1124px) and (max-width:1279px){
+	html {font-size:14px;}
+}
+@media screen and (min-width:768px) and (max-width:1123px){
+	html {font-size:12px;}
+}
+
 .ban{width:100%;overflow:hidden}
 .ban img{width:100%;height:auto}
 .title_comp{width:940px;overflow:hidden;background:url(../img/e_title.png) no-repeat 0 0;padding:40px 0 0 0;height:20px;margin:0 auto}
@@ -14,4 +29,13 @@
 .party{width:100%;overflow:hidden}
 .party img{width:100%;height:auto}
 
+.about{position:relative;width:100%;overflow:hidden}
+.about > img{width:100%;height:auto}
 
+.about .texts1{position:absolute;left:50%;margin-left:-30%;top:60%;width:60%;bottom:0;background:#fff;}
+.about .texts1 img{width:100%;height:auto;display:block}
+.about .texts1 p{line-height:1.6em;display:block;font-size:1em}
+
+.about .texts2{position:absolute;left:50%;margin-left:-30%;top:45%;width:60%;bottom:0;background:#fff}
+.about .texts2 img{width:100%;height:auto;display:block}
+.about .texts2 p{line-height:1.6em;display:block;font-size:1em}
