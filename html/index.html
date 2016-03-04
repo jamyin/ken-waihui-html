@@ -73,6 +73,9 @@
 						<a href="#"><img src="img/S3-03.png" border="0" /></a>
 						<a href="#"><img src="img/S3-04.png" border="0" /></a>
 						<a href="#"><img src="img/S3-05.png" border="0" /></a>
+						<a href="#"><img src="img/S3-03.png" border="0" /></a>
+						<a href="#"><img src="img/S3-04.png" border="0" /></a>
+						<a href="#"><img src="img/S3-05.png" border="0" /></a>
 					</div>
 					<div id="demo2"></div>
 				</div>
@@ -99,8 +102,10 @@
 				tab2.innerHTML = tab1.innerHTML;
 				
 				function Marquee() {
-					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
-						//					console.log(tab2.offsetWidth);
+					console.log("tab2.offsetWidth:"+tab2.offsetWidth+"\ntab.scrollLeft:"+tab.scrollLeft+"\ntab1.offsetWidth:"+tab1.offsetWidth)
+//					if (tab2.offsetWidth - tab.scrollLeft <= 0) {
+					if (tab.scrollLeft-tab1.offsetWidth >= 0) {
+						console.warn("Hello,"+tab2.offsetWidth);
 						tab.scrollLeft -= tab1.offsetWidth
 					} else {
 						tab.scrollLeft++;
