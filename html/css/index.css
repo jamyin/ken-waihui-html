@@ -3,6 +3,20 @@ body {
 	line-height: 0;
 }
 
+@media screen and (min-width:1440px) {
+	html {font-size: 24px;}
+}
+
+@media screen and (min-width:1280px) and (max-width:1439px){
+	html {font-size:16px;}
+}
+@media screen and (min-width:1124px) and (max-width:1279px){
+	html {font-size:14px;}
+}
+@media screen and (min-width:768px) and (max-width:1123px){
+	html {font-size: 14px;}
+}
+
 .bg {
 	width: 100%;
 	overflow: hidden;
@@ -380,3 +394,13 @@ div#ma-wrapper a:hover img {
   width: 151.2px;
   height: 112.32px;
 } 
+
+
+span.price {
+  position: absolute;
+  font-size: 1em;
+  color: #fff;
+  right: 304px;
+  top: 54%;
+  right: 80%;
+}
