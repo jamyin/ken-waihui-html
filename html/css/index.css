@@ -120,7 +120,7 @@ ul.hd-item a {
 	background-image: url(../img/nav08.png);
 }
 .home-a.cur {
-	background-image: url(../img/nav28.png);
+	background-image: url(../img/nav18.png);
 }
 .home-a:hover {
 	background-image: url(../img/nav18.png);
@@ -130,7 +130,7 @@ ul.hd-item a {
 	background-image: url(../img/nav01.png);
 }
 .aboutus-a.cur {
-	background-image: url(../img/nav21.png);
+	background-image: url(../img/nav11.png);
 }
 .aboutus-a:hover {
 	background-image: url(../img/nav11.png);
@@ -141,7 +141,7 @@ ul.hd-item a {
 	background-image: url(../img/nav02.png);
 }
 .qual-a.cur {
-	background-image: url(../img/nav22.png);
+	background-image: url(../img/nav12.png);
 }
 .qual-a:hover {
 	background-image: url(../img/nav12.png);
@@ -152,7 +152,7 @@ ul.hd-item a {
 	background-image: url(../img/nav03.png);
 }
 .catering-a.cur {
-	background-image: url(../img/nav23.png);
+	background-image: url(../img/nav13.png);
 }
 .catering-a:hover {
 	background-image: url(../img/nav13.png);
@@ -162,7 +162,7 @@ ul.hd-item a {
 	background-image: url(../img/nav04.png);
 }
 .menu-a.cur {
-	background-image: url(../img/nav24.png);
+	background-image: url(../img/nav14.png);
 }
 .menu-a:hover {
 	background-image: url(../img/nav14.png);
@@ -173,7 +173,7 @@ ul.hd-item a {
 	background-image: url(../img/nav05.png);
 }
 .activity-a.cur {
-	background-image: url(../img/nav25.png);
+	background-image: url(../img/nav15.png);
 }
 .activity-a:hover {
 	background-image: url(../img/nav15.png);
@@ -184,7 +184,7 @@ ul.hd-item a {
 	background-image: url(../img/nav06.png);
 }
 .field-a.cur {
-	background-image: url(../img/nav26.png);
+	background-image: url(../img/nav16.png);
 }
 .field-a:hover {
 	background-image: url(../img/nav16.png);
@@ -195,7 +195,7 @@ ul.hd-item a {
 	background-image: url(../img/nav07.png);
 }
 .contanct-a.cur {
-	background-image: url(../img/nav27.png);
+	background-image: url(../img/nav17.png);
 }
 .contanct-a:hover {
 	background-image: url(../img/nav17.png);
@@ -364,6 +364,8 @@ li.weibo.share {
 
 li.tel.share {
 	background-image: url(../img/tel.png);
+	background-position: 0px;
+	width: 156px;
 }
 
 li.weixin.share {
@@ -381,9 +383,9 @@ ul.hd-share {
 }
 
 .share a {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
+	/* display: inline-block; */
+	/* width: 100%; */
+	/* height: 100%; */
 }
 
 div#ma-wrapper a:hover{
@@ -421,4 +423,13 @@ span.price {
 .wexin-pop img {
   width: 200px;
   height: 200px;
+}
+
+li.tel.share span {
+  padding-left: 31px;
+  font-family: "arial narrow";
+  width: 117px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
 }
