@@ -8,17 +8,14 @@ html{font-size:16px}
 @media screen and (min-width:1280px) and (max-width:1439px){
 	html {font-size:16px;}
 }
-@media screen and (min-width:1124px) and (max-width:1279px){
+@media screen and (min-width:768px) and (max-width:1279px){
 	html {font-size:14px;}
-}
-@media screen and (min-width:768px) and (max-width:1123px){
-	html {font-size:12px;}
 }
 
 .ban{width:100%;overflow:hidden}
 .ban img{width:100%;height:auto}
-.title_comp{width:940px;overflow:hidden;background:url(../img/e_title.png) no-repeat 0 0;padding:40px 0 0 0;height:20px;margin:0 auto}
-.text_comp{width:940px;overflow:hidden;margin:50px auto 0;padding-bottom:30px;border-bottom:1px #d6d6d6 solid}
+.title_comp{width:940px;overflow:hidden;background:url(../img/e_title.png) no-repeat 0 0;padding:82px 0 0 0;height:20px;margin:0 auto}
+.text_comp{width:940px;overflow:hidden;margin:30px auto 0;padding-bottom:30px;border-bottom:1px #d6d6d6 solid}
 .text_comp p{line-height:24px;margin-bottom:40px;}
 .list_comp{width:940px;overflow:hidden;line-height:24px;margin:50px auto 50px;}
 .list_comp dl{width:50%;overflow:hidden;float:left}
