@@ -309,26 +309,27 @@ span.s4-bd img {
 
 div#ma-wrapper {
 	position: absolute;
-	bottom: 29.6%;
+	/* bottom: 26%; */
+	top: 49%;
 	left: 50%;
 	margin-left: -30%;
 	width: 60%;
-	background: #000;
+	/* background: yellow; */
 	border: 0 dashed #CCC;
 	overflow: hidden;
 	box-sizing: border-box;
 }
 
 #ma-wrapper img {
-	width: 126px;
-	height: 93.6px;
+	width: 168px;
+	height: 120px;
 }
 
 div#ma-wrapper a {
 	position: relative;
 	display: block;
 	margin: 0;
-	padding: 20px 0;
+	padding: 40px 0;
 	float: left;
 	margin-right: 10px;
 	/* left: 50%; */
@@ -397,8 +398,8 @@ div#ma-wrapper a:hover{
 }
 
 div#ma-wrapper a:hover img {
-  width: 200px;
-  height: 140px;
+  width: 300px;
+  height: 214px;
   margin-top: -10px;
 } 
 
