@@ -27,5 +27,10 @@ $(function() {
 	}, function() {
 		$(".wexin-pop").addClass("hide");
 	});
+	$(".tel").hover(function() {
+		$(".phone-pop").removeClass("hide");
+	}, function() {
+		$(".phone-pop").addClass("hide");
+	});
 
 });

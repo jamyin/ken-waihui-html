@@ -365,8 +365,8 @@ li.weibo.share {
 
 li.tel.share {
 	background-image: url(../img/tel.png);
-	background-position: 0px;
-	width: 156px;
+	/* background-position: 0px; */
+	/* width: 156px; */
 }
 
 li.weixin.share {
@@ -427,11 +427,17 @@ span.price {
   height: 200px;
 }
 
-li.tel.share span {
-  padding-left: 31px;
-  font-family: "arial narrow";
-  width: 117px;
-  color: #fff;
-  font-size: 20px;
+
+.phone-pop {
+  width: 200px;
+  height: 40px;
   line-height: 40px;
+  background-color: black;
+  position: absolute;
+  right: 8px;
+  top: 80px;
+  color: #fff;
+  text-align: center;
+  font-family: "arial narrow";
+  overflow: hidden;
 }
