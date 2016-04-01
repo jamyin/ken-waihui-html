@@ -276,6 +276,7 @@
 		$(selector).css({
 			"left": left + "px"
 		}).attr('move',left)
+		$('.kind').html($(selector).find('li.cur img').attr('alt'))
 	};
 	
 	function moveRight(selector, index, distance) {
@@ -291,6 +292,7 @@
 		$(selector).css({
 			"left": left + "px"
 		}).attr('move',left)
+		$('.kind').html($(selector).find('li.cur img').attr('alt'))
 	};
     </script>
 
