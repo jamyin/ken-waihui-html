@@ -6,6 +6,7 @@ body{background:url(../img/index_bg.jpg) repeat-y;}
 #fsvs-body{}
 .simsum{font-family:"宋体"}
 li{list-style:none}
+a{text-decoration:none}
 .wrapper{width:1000px;overflow:hidden;margin:0 auto 50px}
 .curfont{font-family:"myFont"}
 

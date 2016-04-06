@@ -11,8 +11,8 @@
 	<div class="wrapper">
 		<nav class="nav">
 			<p>
-				<a class="mu cur" e_data="main" c_data="首页" href="###">首页</a>
-				<a class="mu" e_data="menu" c_data="精选菜单" href="###">精选菜单</a>
+				<a class="mu cur" e_data="main" c_data="首页" href="index.html">首页</a>
+				<a class="mu" e_data="menu" c_data="精选菜单" href="cartering.html">精选菜单</a>
 				<a class="mu" e_data="servie" c_data="外烩服务" href="###">外烩服务</a>
 				<a class="mu" e_data="company" c_data="公司资质" href="###">公司资质</a>
 				<a class="mu" e_data="case" c_data="活动案例" href="###">活动案例</a>
@@ -121,53 +121,7 @@
 		},function(){
 			$(this).html($(this).attr('c_data'))
 		});
-		
-		//三角形对角高度
-		var _tHeight = $('.side5bg').height()
-		$('.triangle').css("border-bottom", _tHeight + "px #2b76ae solid")
-		
-		//向左滚动
-		$(".prebtn").on("click", function() {
-			var _index = $('.picker ul li.cur').index()
-			moveLeft(".picker ul", _index, 300);
-		});
-		//向右滚动
-		$(".nxtbtn").on("click", function() {
-			var _index = $('.picker ul li.cur').index()
-			moveRight(".picker ul", _index, -300);
-		});
 	})
-	
-	function moveLeft(selector, index, distance) {
-		var _move = parseInt($(selector).attr('move'))
-		var left = _move + distance
-		if(_move >= 0){
-			left = 0
-		}else{
-			left = left
-			$(selector).find('li').eq(index-1).addClass('cur').siblings().removeClass('cur')
-		}
-		$(selector).css({
-			"left": left + "px"
-		}).attr('move',left)
-		$('.kind').html($(selector).find('li.cur img').attr('alt'))
-	};
-	
-	function moveRight(selector, index, distance) {
-		var _count = $(selector).find('li').length*300 - 900
-		var _move = parseInt($(selector).attr('move'))
-		var left = _move + distance
-		if(_move <= -_count){
-			left = -_count
-		}else{
-			left = left
-			$(selector).find('li').eq(index+1).addClass('cur').siblings().removeClass('cur')
-		}
-		$(selector).css({
-			"left": left + "px"
-		}).attr('move',left)
-		$('.kind').html($(selector).find('li.cur img').attr('alt'))
-	};
     </script>
 
 </body>
