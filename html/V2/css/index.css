@@ -174,6 +174,8 @@ footer.joinus{position:relative;width:100%;height:40px;background:#000;line-heig
 .party_style .subtitle span{width:100%;display:block;overflow:hidden;font-size:40px;margin:20px 0 20px;}
 .party_style ul{width:100%;overflow:hidden;padding:90px 100px 50px}
 .party_style ul li{width:370px;height:550px;background:#fff;float:left;margin-bottom:50px;line-height:0;overflow:hidden}
+.party_style ul li img{width:370px;height:236px;-webkit-filter:grayscale(1);}
+.party_style ul li:hover img{-webkit-filter:grayscale(0);}
 .party_style ul li:nth-child(odd){margin-right:60px}
 
 .party_style ul li img{width:100%;height:236px;}
