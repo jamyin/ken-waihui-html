@@ -1,14 +1,19 @@
 @charset "UTF-8";
+@font-face {font-family:myFont; src: url("font/avant.otf")}  
 /* CSS Document */
 *{margin: 0;padding: 0;font-family: "Microsoft YaHei", "宋体";	-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{background:url(../img/index_bg.jpg) repeat-y;}
 #fsvs-body{}
 .simsum{font-family:"宋体"}
 li{list-style:none}
+.wrapper{width:1000px;overflow:hidden;margin:0 auto}
+.curfont{font-family:"myFont"}
+
 .nav{width:100%;height:80px;/*background:rgba(0,0,0,.5)*/}
 .nav p{width:900px;height:80px;display:block;padding:0 0 0 100px;margin:0 auto;background:url(../img/logo.png) no-repeat 0 36px}
-.nav p a{font-size:14px;margin:30px 20px;float:left;display:block;line-height:30px;}
+.nav p a{font-size:14px;margin:30px 15px;float:left;display:block;line-height:30px;color:#fff;min-width:70px;text-align:center}
 .nav p a.cur{border-bottom:2px white solid;}
-.nav p a.phone, .nav p a.sina, .nav p a.wechat{position:relative;width:20px;height:20px;padding:0;float:right;margin:30px 0 0 5px;background-repeat:no-repeat;background-position:center center}
+.nav p a.phone, .nav p a.sina, .nav p a.wechat{position:relative;width:20px;height:20px;padding:0;float:right;margin:30px 0 0 5px;background-repeat:no-repeat;background-position:center center;min-width:20px;}
 .nav p a.phone{background-image:url(../img/phone.png)}
 .nav p a.sina{background-image:url(../img/sina.png)}
 .nav p a.wechat{background-image:url(../img/wechat.png)}
@@ -17,7 +22,6 @@ li{list-style:none}
 .nav p a.phone span{position:absolute;top:30px;left:-20px;width:120px;height:30px;display:block;background:#000 url(../img/arrow.png) no-repeat 60px 0;padding-top:6px;line-height:20px;font-size:16px;display:none}
 .nav p a.phone span i{position:absolute;top:-6px;left:20px;width:16px;height:6px;display:block;background:url(../img/arrow.png) no-repeat 0 0;}
 .nav p a:hover span{display:block}
-
 
 
 /*.nav > a.logo{width:200px;height:80px;float:left;background:url(../images/logo_h.png) no-repeat 0 center;margin-left:8%;display:block}
@@ -154,5 +158,29 @@ footer.joinus{position:relative;width:100%;height:40px;background:#000;line-heig
 .activity ._border{left:390px;}
 .contact ._border{left:510px;}
 ._transition {-webkit-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out 1s;-moz-transition: all 1s ease-in-out;transition: all 1s ease-in-out;}
+
+
+.page_title1{width:100%;height:100px;margin:100px 0 50px;background:url(../img/page_title1.png) no-repeat center center}
+.catering_box{width:1000px;padding:50px 100px 50px;overflow:hidden;background:rgba(190,24,24,.8);color:#fff;}
+.catering_box p{font-size:14px;line-height:36px;margin-bottom:50px}
+.catering_box .subtitle{width:100%;overflow:hidden;text-align:center;font-size:26px}
+.catering_box .subtitle span{width:100%;display:block;overflow:hidden;font-size:40px;margin:20px 0 20px;}
+.imgbox{width:100%;overflow:hidden}
+.imgbox img{width:100%;height:auto}
+
+.party_style{width:1000px;overflow:hidden;background:#eaeaea;color:#000;margin-top:40px;}
+.party_style .title{width:1000px;overflow:hidden;background:#272727;color:#fff;padding:50px 0}
+.party_style .subtitle{width:100%;overflow:hidden;text-align:center;font-size:26px;background:#272727;color:#fff;padding:50px 0}
+.party_style .subtitle span{width:100%;display:block;overflow:hidden;font-size:40px;margin:20px 0 20px;}
+.party_style ul{width:100%;overflow:hidden;background:#CC3;padding:90px 100px}
+.party_style ul li{width:370px;height:550px;background:#fff;float:left;margin-bottom:50px;line-height:0;overflow:hidden}
+.party_style ul li:nth-child(odd){margin-right:60px}
+
+.party_style ul li img{width:100%;height:236px;}
+.party_style ul li .cont{width:100%;overflow:hidden;display:block;padding:35px;}
+.party_style ul li .cont h2{width:100%;line-height:30px;display:block;text-align:center;margin-bottom:10px;}
+.party_style ul li .cont h3{width:100%;margin:0 0;line-height:30px;display:block;text-align:center;margin-bottom:20px;}
+.party_style ul li .cont span{width:100%;margin:0 0;line-height:26px;margin-bottom:18px;display:block;font-size:14px}
+
 
 
