@@ -168,6 +168,9 @@ footer.joinus{position:relative;width:100%;height:40px;background:#000;line-heig
 .catering_box .subtitle span{width:100%;display:block;overflow:hidden;font-size:40px;margin:20px 0 20px;}
 .imgbox{width:100%;overflow:hidden}
 .imgbox img{width:100%;height:auto}
+.imgbox.company, .imgbox.factory{text-align:center}
+.imgbox.company img{width:50%;height:auto;}
+.imgbox.factory img{width:40%;height:auto;padding:0 20px}
 
 .party_style{width:1000px;overflow:hidden;background:#eaeaea;color:#000;margin-top:40px;}
 .party_style .title{width:1000px;overflow:hidden;background:#272727;color:#fff;padding:50px 0}
@@ -221,6 +224,24 @@ footer.joinus{position:relative;width:100%;height:40px;background:#000;line-heig
 .contactus_box ul li span{display:block;clear:both;color:#a7dcd1;font-size:14px}
 .contactus_box.service ul li span{color:#888888;}
 
+
+.page_title4{width:100%;height:100px;margin:100px 0 50px;background:url(../img/page_title4.png) no-repeat center center}
+.company_box{width:1000px;padding:50px 100px 50px;overflow:hidden;background:rgba(83,145,192,.8);color:#fff;}
+.company_box.factory, .company_box.certification{background:#ececec;margin-top:50px;color:#000}
+.company_box.qualifications{background:rgba(0,0,0,.4);margin-top:50px;color:#fff}
+.company_box p{font-size:14px;line-height:36px;margin-bottom:50px}
+.company_box .subtitle{width:100%;overflow:hidden;text-align:center;font-size:26px}
+.company_box .subtitle span{width:100%;display:block;overflow:hidden;font-size:40px;margin:20px 0 20px;}
+.company_box ul{width:100%;overflow:hidden;padding:90px 0 50px;}
+.company_box ul li{width:370px;height:138px;background:url(../img/company_border.png) no-repeat;float:left;margin-bottom:50px;line-height:0;overflow:hidden}
+.company_box ul li img{width:370px;height:236px;-webkit-filter:grayscale(1);}
+.company_box ul li:hover img{-webkit-filter:grayscale(0);}
+.company_box ul li:nth-child(odd){margin-right:60px}
+
+.company_box ul li img{width:100%;height:236px;}
+.company_box ul li .cont{width:100%;overflow:hidden;display:block;padding:45px;}
+.company_box ul li .cont h2{width:100%;line-height:20px;display:block;text-align:center;margin-bottom:10px;font-size:18px}
+.company_box ul li .cont h3{width:100%;margin:0 0;line-height:20px;display:block;text-align:center;margin-bottom:20px;font-size:12px}
 
 
 .footer{width:100%;overflow:hidden;background:url(../img/footer.png) no-repeat center 50px;text-align:center;padding-top:200px;font-size:12px;color:#fff;line-height:22px}
