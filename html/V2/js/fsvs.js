@@ -544,7 +544,7 @@
 			        //page_switch_fuction
 
 					if (currentSlideIndex == 0) {
-						$('.side1_logo, .side1_slogan').addClass('show')
+						
 			        }
 					
 					if (currentSlideIndex == 1) {
