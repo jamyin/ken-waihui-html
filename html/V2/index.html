@@ -133,27 +133,27 @@
 				</nav>
 		</div>
             
-         <div class="side_box side4bg" style="background:url(img/side4_title.jpg) no-repeat">
+         <div class="side_box side4bg">
+		 	<div class="mas"></div>
 		 	<div class="side4_title_f">精心的菜品设计，精美的菜式摆盘，从工作盒餐到中西式餐宴。个性化的膳食营养搭配，营养更合理、饮食更安全、选择更丰富。</div>
 			<a class="more" href="###">更多</a>
 		 	<div class="side4_cont">
-				<ul>
-					<li>
-						<img src="img/side4_pic1.jpg" border="0">
-						<p>3500元中式套餐<br><span class="simsum">￥2000 Chinese Package </span></p>
-						<a href="###"><span>更多</span></a>
-					</li>
-					<li>
-						<img src="img/side4_pic2.jpg" border="0">
-						<p>3500元中式套餐<br><span class="simsum">￥2000 Chinese Package </span></p>
-						<a href="###"><span>更多</span></a>
-					</li>
-					<li>
-						<img src="img/side4_pic3.jpg" border="0">
-						<p>3500元中式套餐<br><span class="simsum">￥2000 Chinese Package </span></p>
-						<a href="###"><span>更多</span></a>
-					</li>
-				</ul>
+				<div class="picker2">
+					<ul move=0>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+						<li><img src="img/xie.jpg" border="0"></li>
+					</ul>
+				</div>
+				<div class="leftbtn"></div>
+				<div class="rightbtn"></div>
 			</div>
 		 </div>
 
@@ -269,6 +269,16 @@
 			var _index = $('.picker ul li.cur').index()
 			moveRight(".picker ul", _index, -300);
 		});
+		
+		
+		//向左滚动
+		$(".leftbtn").on("click", function() {
+			move_Left($(this).parent().find('ul'), 1000);
+		});
+		//向右滚动
+		$(".rightbtn").on("click", function() {
+			move_Right($(this).parent().find('ul'), -1000);
+		});
 	})
 	
 	function moveLeft(selector, index, distance) {
@@ -300,6 +310,33 @@
 			"left": left + "px"
 		}).attr('move',left)
 		$('.kind').html($(selector).find('li.cur img').attr('alt'))
+	};
+	
+	function move_Left(selector, distance) {
+		var _move = parseInt(selector.attr('move'))
+		var left = _move + distance
+		if(_move >= 0){
+			left = 0
+		}else{
+			left = left
+		}
+		selector.css({
+			"left": left + "px"
+		}).attr('move',left)
+	};
+	
+	function move_Right(selector, distance) {
+		var _count = selector.find('li').length*1000 - 1000
+		var _move = parseInt(selector.attr('move'))
+		var left = _move + distance
+		if(_move <= -_count){
+			left = -_count
+		}else{
+			left = left
+		}
+		selector.css({
+			"left": left + "px"
+		}).attr('move',left)
 	};
     </script>
 
