@@ -37,16 +37,18 @@ We have rich experience in the activities, create personalized theme parties, pr
 		<div class="menu_style picker">
 			<div class="subtitle">西式宴会菜单<span class="curfont">West Package</span></div>
 			<div class="picker">
-				<ul move=0>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-				</ul>
+				<div class="trace" move=0>
+					<ul>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+					</ul>
+				</div>
 			</div>
 			<div class="leftbtn"></div>
 			<div class="rightbtn"></div>
@@ -135,16 +137,14 @@ We have rich experience in the activities, create personalized theme parties, pr
 		<div class="menu_style picker">
 			<div class="subtitle">自助餐菜单<span class="curfont">Buffet</span></div>
 			<div class="picker">
-				<ul move=0>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-					<li><img src="img/menu_picker.jpg" border="0"></li>
-				</ul>
+				<div class="trace" move=0>
+					<ul>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+						<li><img src="img/menu_picker.jpg" border="0"></li>
+						<li><img src="img/menu_picker2.jpg" border="0"></li>
+					</ul>
+				</div>
 			</div>
 			<div class="leftbtn"></div>
 			<div class="rightbtn"></div>
@@ -166,19 +166,22 @@ We have rich experience in the activities, create personalized theme parties, pr
 		});
 		//向左滚动
 		$(".leftbtn").on("click", function() {
-			moveLeft($(this).parent().find('ul'), 900);
+			move_Left($(this).parent().find('.trace'), 900);
 		});
 		//向右滚动
 		$(".rightbtn").on("click", function() {
-			moveRight($(this).parent().find('ul'), -900);
+			move_Right($(this).parent().find('.trace'), -900);
 		});
 	})
 	
-	function moveLeft(selector, distance) {
+
+	function move_Left(selector, distance) {
+		var _pickerCount = selector.find('ul').eq(0)
+		var _count = selector.find('li').length*900 - selector.find('ul').length*900
 		var _move = parseInt(selector.attr('move'))
 		var left = _move + distance
 		if(_move >= 0){
-			left = 0
+			left=-_count
 		}else{
 			left = left
 		}
@@ -187,18 +190,21 @@ We have rich experience in the activities, create personalized theme parties, pr
 		}).attr('move',left)
 	};
 	
-	function moveRight(selector, distance) {
-		var _count = selector.find('li').length*900 - 900
+	function move_Right(selector, distance) {
+		var _pickerCount = selector.find('ul').eq(0)
+		var _count = selector.find('li').length*900 - selector.find('ul').length*900
 		var _move = parseInt(selector.attr('move'))
 		var left = _move + distance
 		if(_move <= -_count){
-			left = -_count
-		}else{
-			left = left
+			
+			selector.append(_pickerCount.clone())
 		}
+		left = left
+	
 		selector.css({
 			"left": left + "px"
 		}).attr('move',left)
+		
 	};
     </script>
 

@@ -93,16 +93,15 @@
 			<a class="more" href="###">更多</a>
 		 	<div class="side3_cont">
 				<div class="picker">
-					<ul move=0>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会1"></li>
-						<li class="cur"><img src="img/side3_pic.jpg" border="0" alt="中西式宴会2"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会3"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会4"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会5"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会6"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会7"></li>
-						<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会8"></li>
-					</ul>
+					<div class="trace" move=0>
+						<ul>
+							<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会1"></li>
+							<li class="cur"><img src="img/side3_pic.jpg" border="0" alt="中西式宴会2"></li>
+							<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会3"></li>
+							<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会4"></li>
+							<li><img src="img/side3_pic.jpg" border="0" alt="中西式宴会5"></li>
+						</ul>
+					</div>
 				</div>
 				<div class="prebtn"></div>
 				<div class="nxtbtn"></div>
@@ -139,18 +138,14 @@
 			<a class="more" href="###">更多</a>
 		 	<div class="side4_cont">
 				<div class="picker2">
-					<ul move=0>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-						<li><img src="img/xie.jpg" border="0"></li>
-					</ul>
+					<div class="trace" move=0>
+						<ul>
+							<li><img src="img/xie.jpg" border="0"></li>
+							<li><img src="img/xie2.jpg" border="0"></li>
+							<li><img src="img/xie.jpg" border="0"></li>
+							<li><img src="img/xie2.jpg" border="0"></li>
+						</ul>
+					</div>
 				</div>
 				<div class="leftbtn"></div>
 				<div class="rightbtn"></div>
@@ -261,31 +256,34 @@
 		
 		//向左滚动
 		$(".prebtn").on("click", function() {
-			var _index = $('.picker ul li.cur').index()
-			moveLeft(".picker ul", _index, 300);
+			var _index = $('.side3_cont .picker .trace ul li.cur').index()
+			moveLeft(".side3_cont .picker .trace", _index, 300);
 		});
 		//向右滚动
 		$(".nxtbtn").on("click", function() {
-			var _index = $('.picker ul li.cur').index()
-			moveRight(".picker ul", _index, -300);
+			var _index = $('.side3_cont .picker .trace ul li.cur').index()
+			moveRight(".side3_cont .picker .trace", _index, -300);
 		});
 		
 		
 		//向左滚动
 		$(".leftbtn").on("click", function() {
-			move_Left($(this).parent().find('ul'), 1000);
+			move_Left($(this).parent().find('.trace'), 1000);
 		});
 		//向右滚动
 		$(".rightbtn").on("click", function() {
-			move_Right($(this).parent().find('ul'), -1000);
+			move_Right($(this).parent().find('.trace'), -1000);
 		});
 	})
 	
 	function moveLeft(selector, index, distance) {
+		var _pickerCount = $(selector).find('ul li')
+		var _count = $(selector).find('li').length*300 - 900
 		var _move = parseInt($(selector).attr('move'))
 		var left = _move + distance
 		if(_move >= 0){
-			left = 0
+			left=-_count
+			$(selector).find('li').eq($(selector).find('li').length-2).addClass('cur').siblings().removeClass('cur')
 		}else{
 			left = left
 			$(selector).find('li').eq(index-1).addClass('cur').siblings().removeClass('cur')
@@ -297,26 +295,34 @@
 	};
 	
 	function moveRight(selector, index, distance) {
+		var _pickerCount = $(selector).find('ul li')
 		var _count = $(selector).find('li').length*300 - 900
 		var _move = parseInt($(selector).attr('move'))
 		var left = _move + distance
+		//alert(left)
+		//alert(_move)
 		if(_move <= -_count){
-			left = -_count
-		}else{
-			left = left
-			$(selector).find('li').eq(index+1).addClass('cur').siblings().removeClass('cur')
+			$(selector).find('ul').append(_pickerCount.clone())
 		}
+		left = left
+		$(selector).find('li').eq(index+1).addClass('cur').siblings().removeClass('cur')
+
 		$(selector).css({
 			"left": left + "px"
 		}).attr('move',left)
+		//alert($(selector).attr('move'))
 		$('.kind').html($(selector).find('li.cur img').attr('alt'))
 	};
 	
+	
+	
 	function move_Left(selector, distance) {
+		var _pickerCount = selector.find('ul').eq(0)
+		var _count = selector.find('li').length*1000 - selector.find('ul').length*1000
 		var _move = parseInt(selector.attr('move'))
 		var left = _move + distance
 		if(_move >= 0){
-			left = 0
+			left=-_count
 		}else{
 			left = left
 		}
@@ -326,14 +332,15 @@
 	};
 	
 	function move_Right(selector, distance) {
-		var _count = selector.find('li').length*1000 - 1000
+		var _pickerCount = selector.find('ul').eq(0)
+		var _count = selector.find('li').length*1000 - selector.find('ul').length*1000
 		var _move = parseInt(selector.attr('move'))
 		var left = _move + distance
 		if(_move <= -_count){
-			left = -_count
-		}else{
-			left = left
+			selector.append(_pickerCount.clone())
 		}
+		left = left
+	
 		selector.css({
 			"left": left + "px"
 		}).attr('move',left)
